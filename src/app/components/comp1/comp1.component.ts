@@ -15,27 +15,27 @@ export class Comp1Component {
     this.name=""
   }
 
-  setSource() {
-    this.source = `assets/imgs/${this.counter}.jpg`;
-  }
+  // setSource() {
+  //   this.source = `assets/imgs/${this.counter}.jpg`;
+  // }
   next() {
     if (this.counter < 6) {
       this.counter++;
     }
-    this.setSource();
+    // this.setSource();
   }
   prev() {
     if (this.counter > 1) {
       this.counter--;
     }
-    this.setSource();
+    // this.setSource();
   }
 
   start() {
     this.timer = setInterval(() => {
       if (this.counter == 6) this.counter = 0;
       this.counter++;
-      this.setSource();
+      // this.setSource();
     }, 500)
   }
 
