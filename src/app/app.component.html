@@ -1,2 +1,12 @@
 
+<h1>Day 2</h1>
 <app-comp1></app-comp1>
+
+<hr/>
+<h1>Day 3</h1>
+<div class="parent">
+  <h1>Parent</h1>
+  <app-home class="child" [msgFromParent]="dataFromChild"></app-home>
+  <app-login class="child" (myEvent)="getData($event)"></app-login>
+  <h1>{{dataFromChild}}</h1>
+</div>
