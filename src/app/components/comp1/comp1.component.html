@@ -1,0 +1,21 @@
+
+<!--Task 1-->
+<div id="task1">
+  <h1>Task 1</h1>
+  <input type="text" placeholder="enter text" [(ngModel)]="name"/>
+  <p>{{name}}</p>
+  <button (click)="clear()">reset</button>
+</div>
+
+<!--Task 2-->
+<div id="task2">
+  <h1>Task 2</h1>
+  <img [src]="source"/>
+  <div class="btns">
+    <button (click)="prev()">prev</button>
+    <button (click)="next()">next</button>
+
+    <button (click)="start()">start</button>
+    <button (click)="stop()">stop</button>
+</div>
+</div>
