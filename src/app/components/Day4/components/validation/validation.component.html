@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <form (ngSubmit)="getValue()" [formGroup]="formValidation" class="form">
+        <div class="form-group d-flex m-auto mb-2">
+          <label class="col-3">Name</label>
+          <input  formControlName="name" type="text" class="form-control">
+          <div *ngIf="!NameValid" style="color:red;">
+            not Valid
+          </div>
+        </div>
+
+        <div class="form-group d-flex m-auto mb-2">
+          <label class="col-3">Age</label>
+          <input formControlName="age" type="number" class="form-control">
+          <div *ngIf="!AgeValid" style="color:red;">
+            not Valid (20 &lt; age &lt;  60)
+          </div>
+        </div>
+        <div class="form-group text-center m-auto mb-2">
+
+          <input  type="submit" value="submit" class="btn btn-outline-success">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

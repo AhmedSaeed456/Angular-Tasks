@@ -1,7 +1,7 @@
 <h3>Registration!</h3>
-<div class="form">
+<!-- <div class="form">
   <input type="text" placeholder="enter name" [(ngModel)]="name" />
-  <div *ngIf="name.length<=3">
+  <div *ngIf="name.length<3">
     Not Valid
   </div>
   <input type="text" placeholder="enter age" [(ngModel)]="age"/>
@@ -9,4 +9,16 @@
     Age Must be between 20 and 40
   </div>
   <button (click)="Fire()">Register</button>
+</div> -->
+
+
+<div class="form">
+  <input #name type="text" placeholder="enter name" />
+
+  <input #age type="text" placeholder="enter age" />
+  <div *ngIf="+age.value<20 || +age.value>40">
+    Age Must be between 20 and 40
+  </div>
+  <button (click)="Fire(name.value,age.value)">Register</button>
 </div>
+

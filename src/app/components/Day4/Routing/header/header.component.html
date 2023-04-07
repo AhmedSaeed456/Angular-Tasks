@@ -1,0 +1,15 @@
+<p>header works!</p>
+<!-- <ul>
+  <li><a href="/">users</a></li>
+  <li><a href="/users">users</a></li>
+  <li><a href="/profile">profile</a></li>
+  <li><a href="/users/1">userDetails</a></li>
+  <li><a href="/abc">error</a></li>
+</ul> -->
+<ul>
+  <li><a [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/">users</a></li>
+  <li><a [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/users">users</a></li>
+  <li><a routerLinkActive="active" routerLink="/profile">profile</a></li>
+  <li><a routerLinkActive="active" routerLink="/users/1">userDetails</a></li>
+  <li><a routerLinkActive="active" routerLink="/abc">error</a></li>
+</ul>

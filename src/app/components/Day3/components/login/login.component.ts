@@ -20,11 +20,10 @@ export class LoginComponent {
 
 
   @Output() myEvent = new EventEmitter();
-  Fire() {
-    if (this.name.length > 3 || (+this.age >= 20 || +this.age <= 40)) {
+  Fire(name:string,age:string) {
+    if (name.length >= 3 && (+age >= 20 && +age <= 40)) {
       let Info = {
-        name: this.name,
-        age: this.age,
+        name,age
       }
 
       this.myEvent.emit(Info);

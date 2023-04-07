@@ -1,0 +1,72 @@
+<head>
+  <style>
+    table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+thead {
+  background-color: #cacaca;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+td {
+  font-size: 14px;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+  background-color: #da6200;
+  color:#fff;
+}
+th{
+  background-color: #000;
+  color:#fff;
+}
+tr:hover {
+  background-color: #ddd;
+}
+
+  </style>
+</head>
+<body>
+<p>student works!</p>
+<table >
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of students">
+      <td  style="color:#000;">
+        {{s.name}}
+      </td>
+
+      <td>
+        {{s.age}}
+      </td>
+      <td>
+        {{s.email}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
